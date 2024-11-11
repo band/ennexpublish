@@ -1,23 +1,27 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "**/*",
-      "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/mwb-static/(.*)",
-      "dest": "/mwb-static/$1"
-    },
-    {
-      "src": "/(.+\\.html)",
-      "dest": "/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
-  ]
+		"version": 2,
+		"builds": [
+				{
+						"src": "**/*",
+						"use": "@vercel/static"
+				}
+		],
+		"routes": [
+				{
+						"src": "/mwb-static/(.*)",
+						"dest": "/mwb-static/$1"
+				},
+				{
+						"src": "/_images/(.*)",
+						"dest": "/_images/$1"
+				},
+				{
+						"src": "/(.+\\.html)",
+						"dest": "/$1"
+				},
+				{
+						"src": "/(.*)",
+						"dest": "/index.html"
+				}
+		]
 }
